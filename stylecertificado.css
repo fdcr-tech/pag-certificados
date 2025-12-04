@@ -1,0 +1,79 @@
+:root {
+    --bg-dark: #121212;
+    --bg-light-dark: #1c1c1c;
+    --text-primary: #e0e0e0;
+    --accent-color: #0d6efd; /* Azul do Bootstrap */
+}
+
+body {
+    background-color: var(--bg-dark); 
+    color: var(--text-primary);
+    font-family: 'Poppins', sans-serif; 
+}
+
+.navbar-glass {
+    background: rgba(20, 20, 20, 0.7);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* CORREÇÃO DA LINHA APLICADA AQUI */
+.hero-section {
+    min-height: 50vh;
+    padding-top: 6rem;
+    /* Alteração: Garante que o gradiente comece e termine na cor de fundo da página (--bg-dark), eliminando a linha */
+    background: linear-gradient(to bottom, rgba(18, 18, 18, 0.7), var(--bg-dark) 100%), 
+                url('imagenscertificados/pfmiranha2.jpg');
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 3rem; 
+}
+
+/* Estilo Base do Card */
+.cert-card {
+    background: rgba(40, 40, 40, 0.5);
+    border-radius: 15px;
+    padding: 1.5rem;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+}
+
+/* Efeito de Aura (Hover) */
+.cert-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 
+        0 8px 30px rgba(0, 0, 0, 0.7), 
+        0 0 20px 5px rgba(13, 110, 253, 0.6); 
+    border-color: var(--accent-color); 
+}
+
+.cert-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.15);
+    cursor: pointer; 
+}
+
+.open-modal-trigger {
+    text-decoration: none;
+    display: block; 
+}
+
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.6s ease-out;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-darker {
+    background: var(--bg-light-dark);
+}
