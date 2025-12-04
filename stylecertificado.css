@@ -93,8 +93,13 @@ body {
     transition: all 0.2s ease;
 }
 
-@media (max-width: 576px) {
-    .navbar-brand {
-        margin-left: 40px; 
+.nav-slot {
+    width: 60px;  
+    height: 20px;
+}
+
+@media (min-width: 768px) {
+    .nav-slot {
+        width: 0;
     }
 }
