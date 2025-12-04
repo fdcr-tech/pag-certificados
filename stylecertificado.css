@@ -92,3 +92,9 @@ body {
     z-index: 1100;
     transition: all 0.2s ease;
 }
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        margin-left: 40px; 
+    }
+}
